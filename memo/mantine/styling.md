@@ -1,0 +1,1 @@
+ボタンのprops: color, variant, size and radius
