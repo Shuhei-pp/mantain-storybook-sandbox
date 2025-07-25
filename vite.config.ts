@@ -15,7 +15,7 @@ declare module "@remix-run/node" {
 }
 
 
-const isStorybook = process.argv[1]?.includes("storybook");
+const isStorybook = process.argv[1]?.includes("/storybook");
 
 export default defineConfig({
   plugins: [!isStorybook && remix({

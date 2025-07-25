@@ -6,8 +6,9 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-
+import '@mantine/core/styles.css';
 import "./tailwind.css";
+import {  MantineProvider, MantineThemeOverride } from "@mantine/core";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -22,6 +23,15 @@ export const links: LinksFunction = () => [
   },
 ];
 
+const mantineTheme:MantineThemeOverride = {
+  colors: {
+    text: [
+            "#212121", "#212121", "#212121", "#212121", "#212121",
+            "#212121", "#212121", "#212121", "#212121", "#212121"
+          ]
+  }
+};
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -32,7 +42,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <MantineProvider theme={mantineTheme}>
+          {children}
+        </MantineProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
