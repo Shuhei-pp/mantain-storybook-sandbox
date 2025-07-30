@@ -23,7 +23,7 @@ export const links: LinksFunction = () => [
 	},
 ];
 
-const mantineTheme: MantineThemeOverride = {
+export const mantineTheme: MantineThemeOverride = {
 	colors: {
 		text: [
 			"#212121",

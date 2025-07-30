@@ -1,6 +1,10 @@
 import { Title } from "@mantine/core";
 
-export const PageTitle = () => {
+type Props = {
+	title: string;
+};
+
+export const PageTitle = ({ title }: Props) => {
 	return (
 		<Title
 			c="text"
@@ -12,7 +16,7 @@ export const PageTitle = () => {
 			ta="center"
 			className="border-b border-solid border-opacity-[0.16] border-b-black"
 		>
-			会員登録
+			{title}
 		</Title>
 	);
 };
