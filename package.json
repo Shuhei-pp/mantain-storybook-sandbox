@@ -23,6 +23,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.1.2",
     "@chromatic-com/storybook": "^4.0.1",
     "@remix-run/dev": "^2.16.8",
     "@storybook/addon-a11y": "^9.0.16",
