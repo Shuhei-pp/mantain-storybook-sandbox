@@ -7,6 +7,7 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import "@mantine/core/styles.css";
+import "@mantine/carousel/styles.css";
 import "./tailwind.css";
 import { MantineProvider, type MantineThemeOverride } from "@mantine/core";
 
@@ -72,6 +73,18 @@ export const mantineTheme: MantineThemeOverride = {
 			"#F0F0F0",
 			"#F0F0F0",
 			"#F0F0F0",
+		],
+		buttonBlack: [
+			"#333333",
+			"#333333",
+			"#333333",
+			"#333333",
+			"#333333",
+			"#333333",
+			"#333333",
+			"#333333",
+			"#333333",
+			"#333333",
 		],
 	},
 };
