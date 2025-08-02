@@ -1,6 +1,8 @@
-import { Button } from "@mantine/core";
+import { Button, type ElementProps, type ButtonProps } from "@mantine/core";
 
-export const RegisterSubmitButton = () => {
+export const RegisterSubmitButton = (
+	props: ElementProps<"button", keyof ButtonProps>,
+) => {
 	return (
 		<Button
 			type="submit"
@@ -16,6 +18,7 @@ export const RegisterSubmitButton = () => {
 					opacity: 0.26,
 				},
 			})}
+			{...props}
 		>
 			新規登録
 		</Button>

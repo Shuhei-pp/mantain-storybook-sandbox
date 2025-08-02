@@ -1,6 +1,6 @@
-import { Anchor, Checkbox, Text } from "@mantine/core";
+import { Anchor, Checkbox, type CheckboxProps, Text } from "@mantine/core";
 
-export const RegisterConfirmCheckbox = () => {
+export const RegisterConfirmCheckbox = (props: CheckboxProps) => {
 	return (
 		<Checkbox
 			w={"100%"}
@@ -16,6 +16,7 @@ export const RegisterConfirmCheckbox = () => {
 					に同意します。
 				</Text>
 			}
+			{...props}
 		/>
 	);
 };

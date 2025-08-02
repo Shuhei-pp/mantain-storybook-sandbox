@@ -1,8 +1,6 @@
 import type { Preview } from "@storybook/react-vite";
 import { addons } from "@storybook/manager-api";
-import { MantineProvider, useMantineColorScheme } from "@mantine/core";
-import { useEffect } from "react";
-import { DARK_MODE_EVENT_NAME } from "storybook-dark-mode";
+import { MantineProvider } from "@mantine/core";
 import { mantineTheme } from "../app/root";
 
 const preview: Preview = {
@@ -28,15 +26,15 @@ export default preview;
 const channel = addons.getChannel();
 
 function ColorSchemeWrapper({ children }: { children: React.ReactNode }) {
-	const { setColorScheme } = useMantineColorScheme();
-	const handleColorScheme = (value: boolean) =>
-		setColorScheme(value ? "dark" : "light");
+	// const { setColorScheme } = useMantineColorScheme();
+	// const handleColorScheme = (value: boolean) =>
+	// 	setColorScheme(value ? "dark" : "light");
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-	useEffect(() => {
-		channel.on(DARK_MODE_EVENT_NAME, handleColorScheme);
-		return () => channel.off(DARK_MODE_EVENT_NAME, handleColorScheme);
-	}, [channel]);
+	// useEffect(() => {
+	// 	channel.on(DARK_MODE_EVENT_NAME, handleColorScheme);
+	// 	return () => channel.off(DARK_MODE_EVENT_NAME, handleColorScheme);
+	// }, [channel]);
 
 	return <>{children}</>;
 }

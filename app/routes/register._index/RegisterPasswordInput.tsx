@@ -1,6 +1,6 @@
-import { Text, TextInput } from "@mantine/core";
+import { Text, TextInput, type TextInputProps } from "@mantine/core";
 
-export const RegisterPasswordInput = () => {
+export const RegisterPasswordInput = (props: TextInputProps) => {
 	return (
 		<TextInput
 			label={
@@ -26,6 +26,7 @@ export const RegisterPasswordInput = () => {
 					borderColor: theme.colors.inputBg[0],
 				},
 			})}
+			{...props}
 		/>
 	);
 };

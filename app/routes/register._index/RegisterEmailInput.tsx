@@ -1,6 +1,6 @@
-import { TextInput } from "@mantine/core";
+import { TextInput, type TextInputProps } from "@mantine/core";
 
-export const RegisterEmailInput = () => {
+export const RegisterEmailInput = (props: TextInputProps) => {
 	return (
 		<TextInput
 			label={"メールアドレス"}
@@ -26,6 +26,7 @@ export const RegisterEmailInput = () => {
 					borderColor: theme.colors.inputBg[0],
 				},
 			})}
+			{...props}
 		/>
 	);
 };
